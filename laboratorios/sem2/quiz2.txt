@@ -1,0 +1,5 @@
+modo interactivo: es un modo donde se ejecuta python directo desde la consola, 
+obteniendo acceso mas rapido a la compilacion directa del codigo una vez escrito
+
+
+modo normal: es un modo donde se ejecuta un codigo anteriormente escrito en algun editor de texto
