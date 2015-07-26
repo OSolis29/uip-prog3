@@ -1,0 +1,65 @@
+1.	Como conectarse a una base de datos MySql
+
+import mysql.connector
+
+Crearemos un variable que será la encargada de manejar la conexión con el servidor de MySQL. Esto se puede hacer de dos maneras, poniendo todos los datos de la conexión en la función, o utilizar cuna variable con los datos como intermediaria.
+1º Forma
+conexion_mysql = mysql.connector.connect(user='usuario', password='contraseña', 
+host='DireccionServidor', database='BaseDeDatos')
+
+2º Forma, para decirle a la función que los datos están dentro de la variable hay que poner “**” (2 asteriscos) delante de la variable.
+# Variable con la configuracion de la conexion
+config_mysql = {
+    'user': 'usuario',
+    'password': 'contraseña',
+    'host': 'DireccionServidor',
+    'database': 'BaseDeDatos',
+}
+ 
+# conectamos al servidor MySql
+conexion_mysql = mysql.connector.connect(**config_mysq
+
+2. Conseguir dirección IP de la maquina
+
+gethostbyname
+Nos permite obtener la dirección IP a partir del nombre del host.
+addr = socket.gethostbyname(socket.gethostname())
+
+
+3.Ejemplo de DML en una base de datos MySQL
+
+4. Probar si un puerto esta abierto o no en python
+
+import socket
+print "Escaner de puertos \n"
+raw_input()
+host = raw_input("Indica el host : ")
+numerouno = raw_input("Primer numero del rango : ")
+numerodos = raw_input("Segundo numero del rango : ")
+socket = socket.socket()
+for puerto in range(int(numerouno),int(numerodos)):
+    try:
+        socket.connect((host,puerto))
+        print "Puerto "+str(puerto)+" abierto"
+        socket.close()
+ 
+    except :
+        print "Puerto "+str(puerto)+" cerrado."
+raw_input()
+
+
+5. Como mostrar el contenido de un archivo en python
+Método: read([bytes]) Lee todo el contenido de un archivo. Si se le pasa la longitud de bytes, leerá solo el contenido hasta la longitud indicada.
+archivo = open("archivo.txt", "r") 
+contenido = archivo.read()
+print contenido
+
+
+
+6. Como apagar la computadora desde python
+apagar = "shutdown /s"
+import os
+os.system(apagar)
+
+
+
