@@ -1,0 +1,28 @@
+TraductorRoot:
+<TraductorRoot>:
+	Proyecto
+
+<Proyecto>:
+	palabra: palabra
+	traduccion: traduccion
+	orientation: 'vertical'
+	Label:
+		orientation: 'vertical'
+		text: '    Traductor:\nIngles - Espanol\nEspanol - Ingles'
+		size_hint: (1, 0.5)
+	BoxLayout:
+		padding: 15
+		spacing: 15
+		orientation: 'vertical'
+		Label:
+			text: 'Palabra a traducir: '
+		TextInput:
+			id: palabra				
+		Button:
+			text: 'Traducir'
+			on_press: root.traductor()
+	Label:
+		size_hint: (1, 0.5)
+		id: traduccion				
+				
+
